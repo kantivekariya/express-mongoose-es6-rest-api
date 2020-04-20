@@ -1,14 +1,20 @@
-# es6-server
-es6-nodejs api
+# Node, Express Server, and ES6 using babel.
 
- 1.Clone repository 
-
-  `https://github.com/kantivekariya/es6-server.git`.
-
- 2.After Clone install node_module.
+# Features
+ * babel 7
+ * Express
+ * bcrypt
+ * jsonwebtoken
+ * mongoose
  
-  `npm install`
-  
- 3.node_module install after run server as following command.
+# Requirements
+ * node v13
+ * mongodb compass
+ 
+# Installation
+ * `git clone https://github.com/kantivekariya/express-mongoose-es6-rest-api.git`
+ * `cd express-mongoose-es6-rest-api`
+ * `npm install`
+ * `npm run dev` Rus as Development
 
-  `npm run dev`
+# GET Routes
