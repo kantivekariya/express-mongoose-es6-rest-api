@@ -33,5 +33,5 @@ React also uses ES6, which is not supported by most of the browsers. Babel conve
 * put `users/1`
 * delete `users/1`
 
-# More Details visit folowing blogs.
+# More Details visit following blogs.
 https://www.linkedin.com/pulse/building-es6-crud-api-nodejs-expressjs-babel-kanti-vekariya
