@@ -1,6 +1,6 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { userModel } from "./crud.model";
+import { userModel } from "./auth.model";
 import httpStatus from "../../utils/httpStatus";
 import appConfig from "../../config/env";
 

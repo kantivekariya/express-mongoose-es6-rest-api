@@ -1,5 +1,5 @@
 import express from "express";
-import { crudRoutes } from "../../module/crud/crud.routes";
+import { crudRoutes } from "../../module/auth/auth.routes";
 
 const apiRoutes = express.Router();
 
