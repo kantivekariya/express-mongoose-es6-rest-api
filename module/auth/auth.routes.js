@@ -2,28 +2,28 @@ import express from "express";
 import userController from "./auth.controller";
 import { asyncWrapper } from "../../utils/asyncWrapper";
 
-const crudRoutes = express.Router();
+const authRoutes = express.Router();
 
-crudRoutes.get("/", function(req, res, next) {
+authRoutes.get("/", function (req, res, next) {
   res.json({ message: "from index api" });
 });
 
 // Create
-crudRoutes.post("/register", asyncWrapper(userController.register));
+authRoutes.post("/register", asyncWrapper(userController.register));
 
 // Login
-crudRoutes.post("/login", asyncWrapper(userController.login));
+authRoutes.post("/login", asyncWrapper(userController.login));
 
 //GetAll Data
-crudRoutes.get("/users", asyncWrapper(userController.findAll));
+authRoutes.get("/users", asyncWrapper(userController.findAll));
 
 //GetBy ID
-crudRoutes.get("/users/:userId", asyncWrapper(userController.findOne));
+authRoutes.get("/users/:userId", asyncWrapper(userController.findOne));
 
 //update by ID
-crudRoutes.put("/users/:userId", asyncWrapper(userController.update));
+authRoutes.put("/users/:userId", asyncWrapper(userController.update));
 
 //Delete
-crudRoutes.delete("/users/:userId", asyncWrapper(userController.delete));
+authRoutes.delete("/users/:userId", asyncWrapper(userController.delete));
 
-export { crudRoutes };
+export { authRoutes };
