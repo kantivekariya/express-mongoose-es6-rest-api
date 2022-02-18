@@ -4,7 +4,7 @@ import { asyncWrapper } from "../../utils/asyncWrapper";
 
 const authRoutes = express.Router();
 
-authRoutes.get("/", function (req, res, next) {
+authRoutes.get("/", (req, res, next) => {
   res.json({ message: "from index api" });
 });
 
