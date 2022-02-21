@@ -38,7 +38,7 @@ userController.login = async (req, res, next) => {
     const user = await UserModel.findOne({ email: email });
     if (user && bcrypt.compareSync(password, user.password)) {
       const token = jwt.sign({ sub: user.id }, appConfig.jwt_key, {
-        expiresIn: "7d",
+        expiresIn: appConfig.jwt_expiration,
       });
       return res.status(httpStatus.OK).json({
         message: "Auth successful",
