@@ -1,6 +1,7 @@
 import express from "express";
 import userController from "./auth.controller";
 import { asyncWrapper } from "../../utils/asyncWrapper";
+import auth from "../../middleware/auth.middleware";
 
 const authRoutes = express.Router();
 
@@ -15,15 +16,15 @@ authRoutes.post("/register", asyncWrapper(userController.register));
 authRoutes.post("/login", asyncWrapper(userController.login));
 
 //GetAll Data
-authRoutes.get("/users", asyncWrapper(userController.findAll));
+authRoutes.get("/users", auth, asyncWrapper(userController.findAll));
 
 //GetBy ID
-authRoutes.get("/users/:userId", asyncWrapper(userController.findOne));
+authRoutes.get("/users/:userId", auth, asyncWrapper(userController.findOne));
 
 //update by ID
-authRoutes.put("/users/:userId", asyncWrapper(userController.update));
+authRoutes.put("/users/:userId", auth, asyncWrapper(userController.update));
 
 //Delete
-authRoutes.delete("/users/:userId", asyncWrapper(userController.delete));
+authRoutes.delete("/users/:userId", auth, asyncWrapper(userController.delete));
 
 export { authRoutes };
