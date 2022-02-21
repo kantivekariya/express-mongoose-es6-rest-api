@@ -6,7 +6,7 @@ import connectMongo from "./config/mongoconnect";
 
 const app = express();
 
-// Production enviroment
+// Production environment
 const isProduction = process.env.NODE_ENV === "production";
 app.use(bodyParser.json());
 
