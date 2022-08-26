@@ -24,7 +24,7 @@
     "debug": "^4.3.3",
     "jsonwebtoken": "^8.5.1",
     "express": "^4.17.3",
-    "mongoose": "^6.2.2",
+    "mongoose": "^6.4.6",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
